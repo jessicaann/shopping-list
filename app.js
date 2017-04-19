@@ -36,8 +36,8 @@ var renderItem = function(state, item, index) {
 	var element = $(listItemTemplate);
 	element.attr('index', index);
   	element.find('.js-shopping-item').text(item.displayName);
-  	if (state.items[index].checked = true) {
-  		element.find('js-shopping-item').addClass('shopping-item__checked');
+  	if (item.checked === true) {
+  		element.find('.js-shopping-item').addClass('shopping-item__checked');
   	}
   	//add the class here if checked has a true value
 	return element;
